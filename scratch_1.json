@@ -1,0 +1,44 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day"],
+         "responses": ["Hello,nice to meet you", "Good to see you again", "Hi there, how can I help?"],
+         "context_set": ""
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye"],
+         "responses": ["See you later", "Have a nice day", "Bye! Come back again soon."]
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure"]
+        },
+        {"tag": "cleaning",
+         "patterns": ["I would like to have my room cleaned", "Is room cleaning available now", "My room is quite nasty"],
+         "responses": ["Yes, Sorry for the inconvenience, we'll look into it ", "we'll send in a team as soon as possible"]
+        },
+        {"tag": "noise",
+         "patterns": ["I would like to raise a complaint on the noisy neighbours in the 5th floor,room 310", "The neighbours are quite noisy", "Can you help us out with the neighbours who are too loud"],
+         "responses": ["Sorry for the inconvenience, we'll look into it", "Help is on the way"]
+        },
+        {"tag": "hot water",
+         "patterns": ["There is no hot water coming from the tap", "The water is not hot", "The geyser is not working"],
+         "responses": [ "We'll send in staffs to check on it, we appreciate your patience!"]
+        },
+        {"tag": "wifi",
+         "patterns": ["The wifi in my room is very slow", "There is no signal from the wifi", "The internet is not working in my room","What is the password of the wifi?"],
+         "responses": ["Sorry for the inconvenience,try reconnecting using password dotworld,spelled  D O T W O R L D ", "There is a maintenance issue, we'll look into it as soon as possible,try reconnecting using password DOTWORLD,spelled D O T W O R L D "]
+        },
+        {"tag": "Temperature",
+         "patterns": ["The AC is not working in my room", "The temperature of my room is not cold enough", "The heater is not working well in my room"],
+         "responses": ["Try turning it off and then turn it on again", "Make sure the settings are right, we'll send in help as soon as possible"]
+        },
+        {"tag": "Bed",
+         "patterns": [ "The bed in here is too small, we would like to have an extra bed", "I need an extra bed"],
+         "responses": ["Help is on the way"]
+        },
+        {"tag": "animals",
+         "patterns": ["There is a rat in the vent", "there is a cockroach in my restroom", "Poor maintenance, insects are crawling all over the place."],
+         "responses": ["Sorry for the inconvenience,help is on the way"]
+        }
+   ]
+}
