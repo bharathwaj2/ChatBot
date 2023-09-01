@@ -20,7 +20,6 @@ import json
 import numpy
 from nltk.stem import PorterStemmer
 stemmer = PorterStemmer()
-from gensim.parsing.preprocessing import remove_stopwords
 import pyjokes
 
 #text to speech
