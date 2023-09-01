@@ -6,8 +6,6 @@ network is used to learn and predict the probability of the user input belonging
 class.
 '''
 
-
-
 import os
 import time
 import speech_recognition as sr
@@ -48,9 +46,8 @@ def get_audio():
     return said
 
 #get the intents file
-with open("scratch_1.json") as file:
+with open("intents.json") as file:
     data = json.load(file)
-
 
 
 words = []
@@ -79,6 +76,7 @@ output = []
 
 out_empty = [0 for _ in range(len(labels))]
 
+# Create a dictionary using the tokenized words
 for x, doc in enumerate(inp_x):
     bag = []
 
@@ -100,16 +98,24 @@ for x, doc in enumerate(inp_x):
 training = numpy.array(training)
 output = numpy.array(output)
 
-#Dnn network
+#DNN network
 net = tflearn.input_data(shape=[None, len(training[0])])
 net = tflearn.fully_connected(net, 16)
 net = tflearn.fully_connected(net, 16)
 net = tflearn.fully_connected(net, len(output[0]), activation="softmax")
 net = tflearn.regression(net)
 
+# Initialize the model
 model = tflearn.DNN(net)
-model.fit(training, output, n_epoch=500, batch_size=10, show_metric=True)
-model.save("model.tflearn")
+
+# Change this to false after one run to avoid training again and again
+not_saved = True
+
+if not_saved:
+    model.fit(training, output, n_epoch=500, batch_size=10, show_metric=True)
+    model.save("model.tflearn")
+
+model.load("model.tflearn")
 
 def bag_of_words(s, words):
     bag = [0 for _ in range(len(words))]
@@ -162,11 +168,8 @@ class chatbot_ai():
                 speak(y)
 
 p=chatbot_ai("Tim")
+print("Listening...")
+speak("Powering On....start speaking, if you want to stop say quit")
 p.driver_function()
 
 
-'''PENDING TASKS:
-- Context matching
-- better response strategy
-- upsampling intents data
-'''
