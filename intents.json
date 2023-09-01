@@ -1,0 +1,145 @@
+{"intents": [
+        {"tag": "Name",
+         "patterns": ["What is your name", "Who is this", "Who are you"],
+         "responses": ["Hi, I am Tim the robot", "Myself tim, here to make your stay much more pleasant", "Hola I am Tim, your personal assistant"],
+         "set":""
+        },
+        {"tag": "greeting",
+         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day"],
+         "responses": ["Hello,nice to meet you", "Good to see you again", "Hi there, how can I help?"],
+         "set": ""
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye"],
+         "responses": ["See you later", "Have a nice day", "Bye! Come back again soon."],
+         "set":""
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure"],
+         "set":""
+        },
+        {"tag": "cleaning",
+         "patterns": ["I would like to have my room cleaned", "Is room cleaning available now", "My room is quite nasty"],
+         "responses": ["Yes, Sorry for the inconvenience, we'll look into it ", "we'll send in a team as soon as possible"],
+         "set":""
+        },
+        {"tag": "noise",
+         "patterns": ["I would like to raise a complaint on the noisy neighbours in the 5th floor,room 310", "The neighbours are quite noisy", "Can you help us out with the neighbours who are too loud"],
+         "responses": ["Sorry for the inconvenience, we'll look into it", "Help is on the way"],
+         "set":""
+        },
+        {"tag": "hot water",
+         "patterns": ["There is no hot water coming from the tap", "The water is not hot", "The geyser is not working"],
+         "responses": [ "We'll send in staffs to check on it, we appreciate your patience!"],
+         "set":""
+        },
+        {"tag": "wifi",
+         "patterns": ["The wifi in my room is very slow", "There is no signal from the wifi", "The internet is not working in my room" ],
+         "responses": ["Sorry for the inconvenience,try reconnecting ", "There is a maintenance issue, we'll look into it as soon as possible, meanwhile try reconnecting "],
+         "set":""
+        },
+        {"tag": "Temperature cold",
+         "patterns": ["The AC is not working in my room", "There's a problem with the thermostat"],
+         "responses": ["Try turning it off and then turn it on again", "Make sure the settings are right, we'll send in help as soon as possible"],
+         "set":""
+        },
+        {"tag": "Temperature hot",
+        "patterns": ["The heater is not working in my room", "There's a problem with the geyser in my room"],
+        "responses": ["Try turning it off and then turn it on again", "Concerned personnel is on the way to help out"],
+        "set":""
+        },
+        {"tag": "Bad bed",
+        "patterns": [ "The bed in here is not good","The Bed is very unhygienic"],
+        "responses": ["We'll send assistance right away, would you like to change rooms?"],
+        "set": ["bed"]
+        },
+        {"tag":"bed",
+         "patterns": [ "No, just change the bed", "Just have the bed chnaged immediately", "Yes, I would like to" ],
+         "responses": [ "Sorry for the inconvenience, We will change it right away"],
+         "filter":[ "bed" ]
+        },
+        {"tag": "animals",
+         "patterns": ["There is a rat in the vent", "there is a cockroach in my restroom", "Poor maintenance, insects are crawling all over the place."],
+         "responses": ["Sorry for the inconvenience,help is on the way"],
+         "set":""
+        },
+        {"tag": "wifi password",
+        "patterns": ["I need the wifi password","what is the wifi password","I forgot the wifi password"],
+        "responses": ["Try DOTWORLD, all caps, spelled D O T W O R L D"],
+        "set":""
+        },
+        {"tag": "pillows",
+        "patterns": ["I need extra pillows", "Can I get an extra pillow", "There's not enough pillows in my rooms" ],
+        "responses": ["How many are you in need of?" ],
+        "set": ["quantity"]
+        },
+        {"tag": "Bed sheet",
+        "patterns": ["I need extra bedsheets", "The bedsheets are not clean", "Hi, We need a change of bedsheets" ],
+        "responses": ["How many are you in need of?" ],
+        "set": ["quantity"]
+        },
+        {"tag": "Quantities",
+        "patterns": ["I need 2 pieces", "I need 3 pieces" ],
+        "responses": ["We'll get it to you in no time" ],
+        "filter": ["quantity"]
+        },
+        {"tag": "luggage",
+        "patterns": ["I need help with my luggage", "I need my luggage transferred to my room" ],
+        "responses": ["Sure, the belhop is on the way" ],
+        "set":""
+        },
+        {"tag": "courier",
+        "patterns": ["I need my parcel picked from the lobby" ],
+        "responses": ["sure, it'll just be a minute" ],
+        "set":""
+        },
+        {"tag": "missing",
+        "patterns": ["My luggage is missing", "My jewellery is missing" ],
+        "responses": ["Please calm down and re-check the room or locker. Help is on the way" ],
+        "set":""
+        },
+        {"tag": "food",
+        "patterns": ["Can I get some food sent up here", "I need something to eat", "I am hungry", "What is today's chef-special" ],
+        "responses": ["Do you want it sent to your room or would you like dine-in?" ],
+        "set": ["choice"]
+        },
+        {"tag": "choices",
+         "patterns": ["Room service would be better", "send it to my room", "I would like to book a table"],
+         "responses": ["Sure, the restaurant website link has been sent to your mobile number via SMS"],
+         "filter":["choice"]
+        },
+        {"tag": "minibar",
+        "patterns": ["I need my minibar refilled", "Can I have a drink sent up?", "My minibar is empty" ],
+        "responses": ["Sure, your issue has been acknowledged" ],
+        "set":""
+        },
+        {"tag": "room dirty",
+        "patterns": ["The room is very unghygeinic", "I need the room cleaned", "The room is dirty", "I don't like this room at all" ],
+        "responses": ["Sorry for the inconvenience, would you like to change rooms?" ],
+        "set": ["answer"]
+        },
+        {"tag": "Answer chosen",
+        "patterns": ["Yes, I do", "No, I just need it cleaned" ],
+        "responses": ["Sure, assistance is being sent up right away"],
+        "filter": ["answer"]
+        },
+        {"tag": "Swimmimng pool",
+        "patterns": ["Is the swimming pool open now?", "When will the pool be accesible?", "Can I access the pool now?" ],
+        "responses": ["Yes, the pool is open 24/7"],
+        "set": ["open"]
+        },
+        {"tag": "private",
+        "patterns": ["Can I book the pool for myself alone?", "Can you arrange something where i can get pool for myself?"],
+        "responses": ["Sure, for how many hours do you want it for?", "How many hours do u need to book?"],
+        "filter": ["open"],
+        "set": [ "hours" ]
+        },
+        {"tag": "hour",
+         "patterns": [ "For 2 or 3 hours", "I would like to have it for a few hours", "How about for 3 hours"],
+         "responses": [ "Sure, we'll have it ready in a few minutes", "Absolutely, it will take just about a hour to get it ready" ],
+         "filter": [ "hour" ]
+        }
+        
+   ]
+}
